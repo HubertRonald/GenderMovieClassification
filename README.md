@@ -65,7 +65,7 @@ flowchart LR
    cd GenderMovieClassification/gender_movie_classification
    sam init
    ```
-> **Nota:** Este paso 2 es opcional si ya se tiene el arquetipo.
+> **Nota:** Este paso 2 es opcional si ya se tiene el arquetipo efectuar el sam build, si en caso se tuvieran varias imagenes de docker en model_inference usar `prune` (`docker container prune -f`, `docker image prune -a -f`, `docker volume prune -f`, `docker network prune -f`) y validar espacio en disco `df -h`.
 
 3. Como se requiere levantar el servicio ECR, para ello es necesario saber cuál es nuestro **accountID** (`$ aws configure list`) y la **region** que se emplea habitualmente para la cuenta antes encontrada (`$ aws sts get-caller-identity --query Account --output text`)
     ```bash
