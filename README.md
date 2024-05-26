@@ -122,9 +122,10 @@ Para obtener (método **GET**) la clasificación(es) del genero de una película
 
 1. En la barra del navegador de tu preferencia
 
-    |Ejemplo 1 - E1 | Ejemplo 2 - E2 |
+    |Ejemplos | URL |
     |---|---|
-    |https://71qrz15jz2.execute-api.us-east-1.amazonaws.com/Prod/inference?plot=who%20meets%20by%20fate%20,%20%20shall%20be%20sealed%20by%20fate%20.%20%20theresa%20osborne%20is%20running%20along%20the%20beach%20when%20she%20stumbles%20upon%20a%20bottle%20washed%20up%20on%20the%20shore%20.%20%20inside%20is%20a%20message%20,%20%20reading%20the%20letter%20she%20feels%20so%20moved%20and%20yet%20she%20felt%20as%20if%20she%20has%20violated%20someone%20%27%20s%20thoughts%20.%20%20in%20love%20with%20a%20man%20she%20has%20never%20met%20,%20%20theresa%20tracks%20down%20the%20author%20of%20the%20letter%20to%20a%20small%20town%20in%20wilmington%20,%20%20two%20lovers%20with%20crossed%20paths%20.%20%20but%20yet%20one%20can%20%27%20t%20let%20go%20of%20their%20past%20 |https://71qrz15jz2.execute-api.us-east-1.amazonaws.com/Prod/inference?plot=the%20true%20story%20of%20billy%20hayes%20,%20%20an%20american%20college%20student%20who%20is%20caught%20smuggling%20drugs%20out%20of%20turkey%20and%20thrown%20into%20prison%20| 
+    |Ejemplo 1 - E1|https://71qrz15jz2.execute-api.us-east-1.amazonaws.com/Prod/inference?plot=who%20meets%20by%20fate%20,%20%20shall%20be%20sealed%20by%20fate%20.%20%20theresa%20osborne%20is%20running%20along%20the%20beach%20when%20she%20stumbles%20upon%20a%20bottle%20washed%20up%20on%20the%20shore%20.%20%20inside%20is%20a%20message%20,%20%20reading%20the%20letter%20she%20feels%20so%20moved%20and%20yet%20she%20felt%20as%20if%20she%20has%20violated%20someone%20%27%20s%20thoughts%20.%20%20in%20love%20with%20a%20man%20she%20has%20never%20met%20,%20%20theresa%20tracks%20down%20the%20author%20of%20the%20letter%20to%20a%20small%20town%20in%20wilmington%20,%20%20two%20lovers%20with%20crossed%20paths%20.%20%20but%20yet%20one%20can%20%27%20t%20let%20go%20of%20their%20past%20 |
+    |Ejemplo 2 - E2|https://71qrz15jz2.execute-api.us-east-1.amazonaws.com/Prod/inference?plot=the%20true%20story%20of%20billy%20hayes%20,%20%20an%20american%20college%20student%20who%20is%20caught%20smuggling%20drugs%20out%20of%20turkey%20and%20thrown%20into%20prison%20| 
 
     Endpoint método **GET**
     ```bash
