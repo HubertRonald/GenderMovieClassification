@@ -1,4 +1,4 @@
-FROM public.ecr.aws/lambda/python:3.10
+FROM public.ecr.aws/lambda/python:3.9
 
 COPY requirements.txt ./
 COPY ./model/pipeAPIclf.pkl /opt/ml/model/
@@ -7,7 +7,7 @@ COPY modules/ ./modules/
 COPY app.py ./
 
 RUN pip install --upgrade pip==22.0.2
-RUN python3.10 -m pip install -r requirements.txt -t .
+RUN python3.9 -m pip install -r requirements.txt -t .
 
 RUN mkdir -p /var/task/nltk_data
 COPY nltk_data/ /var/task/nltk_data 
