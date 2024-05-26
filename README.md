@@ -179,6 +179,8 @@ Para obtener (método **GET**) la clasificación(es) del genero de una película
     En ambos ejemplos puede ser necesario aplicar un paso 7, para habilitar el proxy
 
     **Paso 7 (Proxy)**
+
+    *Interceptador: Proxy*
     ![](./src/7org.png)
 
     **Ejemplo 1 - E1**
