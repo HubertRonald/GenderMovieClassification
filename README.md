@@ -58,22 +58,22 @@ flowchart LR
 
 1. Al ingresar a AWS se levanta el servicio cloud9, con una instancia EC2 de por lo menos t3.medium y se clona este respositorio
    ```bash
-   $ git clone https://github.com/HubertRonald/GenderMovieClassification.git
+   git clone https://github.com/HubertRonald/GenderMovieClassification.git
    ```
 2. Ingresar al directorio donde está el arquetipo y compilar el servicio con `sam`, más información [aquí](./gender_movie_classification/README.md)
    ```bash 
-   $ cd GenderMovieClassification/gender_movie_classification
-   $ sam init
+   cd GenderMovieClassification/gender_movie_classification
+   sam init
    ```
 3. Como se requiere levantar el servicio ECR, para ello es necesario saber cuál es nuestro **accountID** (`$ aws configure list`) y la **region** que se emplea habitualmente para la cuenta antes encontrada (`$ aws sts get-caller-identity --query Account --output text`)
     ```bash
-    $ aws --region <region> ecr get-login-password | docker login \
+    aws --region <region> ecr get-login-password | docker login \
         --username AWS \
         --password-stdin <accountID>.dkr.ecr.<region>.amazonaws.com
     ```
 4. Crear el respositorio de la imagen con el nombre de `gender-movie-classification`
     ```bash
-    $ aws ecr create-repository \
+    aws ecr create-repository \
       --repository-name "gender-movie-classification" \
       --image-tag-mutability MUTABLE \
       --image-scanning-configuration scanOnPush=true
@@ -82,9 +82,9 @@ flowchart LR
     > Se obtiene el **"repositoryUri"**:
 `<region>.dkr.ecr.us-east-1.amazonaws.com/gender-movie-classification`
 
-1. Se despliega con `sam`, más informacio [aquí](./gender_movie_classification/README.md)
+1. Se despliega con `sam`, más información [aquí](./gender_movie_classification/README.md)
   ```bash
-  $ sam deploy --guided
+  sam deploy --guided
   ```
 1. Diligenciar el wizard
     ```bash
