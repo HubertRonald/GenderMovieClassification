@@ -60,7 +60,7 @@ flowchart LR
    ```bash
    $ git clone https://github.com/HubertRonald/GenderMovieClassification.git
    ```
-2. Ingresar al directorio donde está el arquetipo y ejecutar el compilar el servicio con `sam`, más informacio [aquí](./gender_movie_classification/README.md)
+2. Ingresar al directorio donde está el arquetipo y compilar el servicio con `sam`, más informacio [aquí](./gender_movie_classification/README.md)
    ```bash 
    $ cd GenderMovieClassification/gender_movie_classification
    $ sam init
@@ -82,11 +82,11 @@ flowchart LR
     > Se obtiene el **"repositoryUri"**:
 `<region>.dkr.ecr.us-east-1.amazonaws.com/gender-movie-classification`
 
-5. Se despliega con `sam`, más informacio [aquí](./gender_movie_classification/README.md)
+1. Se despliega con `sam`, más informacio [aquí](./gender_movie_classification/README.md)
   ```bash
   $ sam deploy --guided
   ```
-6. Diligenciar el wizard
+1. Diligenciar el wizard
     ```bash
     Configuring SAM deploy
     ======================
@@ -111,7 +111,7 @@ flowchart LR
           Creating the required resources...
     ```
 
-7. Confirmar despliegue de plantilla compilada en clouformation.
+2. Confirmar despliegue de plantilla compilada en clouformation.
 
 
 ## Consumiendo API
