@@ -60,7 +60,7 @@ flowchart LR
    ```bash
    $ git clone https://github.com/HubertRonald/GenderMovieClassification.git
    ```
-2. Ingresar al directorio donde está el arquetipo y compilar el servicio con `sam`, más informacio [aquí](./gender_movie_classification/README.md)
+2. Ingresar al directorio donde está el arquetipo y compilar el servicio con `sam`, más información [aquí](./gender_movie_classification/README.md)
    ```bash 
    $ cd GenderMovieClassification/gender_movie_classification
    $ sam init
