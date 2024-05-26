@@ -24,6 +24,7 @@ El pipeline que se [serializó](./gender_movie_classification/model_inference/mo
 
 El modelo serializado (pipeline) comprende lo pasos ya mencionados anteriormente:
 
+### A. Preprocesamiento
 #### **Tokenización**
 
 1. La tokenización de palabras es un proceso fundamental en el pre procesamiento de texto para modelos de aprendizaje automático (ML) y procesamiento del lenguaje natural (PLN), es un paso crucial que transforma el texto en una forma adecuada para el análisis y el modelado mediante técnicas de aprendizaje automático.
@@ -36,6 +37,13 @@ El modelo serializado (pipeline) comprende lo pasos ya mencionados anteriormente
 2. **El TFIDVectorizer:** Convierte texto en una matriz ponderada por TF-IDF, capturando tanto la frecuencia de términos como su importancia relativa. Es útil para manejar problemas de alta frecuencia de términos comunes y baja frecuencia de términos raros.
 3. **El DictVectorizer:** Convierte diccionarios de características en matrices de características, útil para datos estructurados y categóricos que ya están en formato de diccionario.convierte una lista de diccionarios (donde cada diccionario representa una muestra y sus características) en una matriz de características.
 
+#### **ToDense**
+Convertir las matrices en arreglos.
+
+#### **Normalizar**
+Escala los vectores de entrada individualmente a la norma unitaria (longitud del vector).
+
+### B. Modelo
 #### **Stacking Classifer**
 
 1. **Modelos Predictivos**
