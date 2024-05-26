@@ -22,6 +22,30 @@ El pipeline que se [serializó](./gender_movie_classification/model_inference/mo
 
 <div style="text-align:center"><img width="60%" src="./src/Pipeline.png" /></div>
 
+El modelo serializado (pipeline) comprende lo pasos ya mencionados anteriormente:
+
+#### **Tokenización**
+
+1. La tokenización de palabras es un proceso fundamental en el pre procesamiento de texto para modelos de aprendizaje automático (ML) y procesamiento del lenguaje natural (PLN), es un paso crucial que transforma el texto en una forma adecuada para el análisis y el modelado mediante técnicas de aprendizaje automático.
+   
+#### **Unión de Características** 
+
+Útil para combinar varios mecanismos de extracción de características en un solo transformador.
+
+1. **El CountVectorizer:** Convierte texto en una matriz de conteos de palabras. Es útil para obtener la frecuencia de términos sin considerar su importancia relativa.
+2. **El TFIDVectorizer:** Convierte texto en una matriz ponderada por TF-IDF, capturando tanto la frecuencia de términos como su importancia relativa. Es útil para manejar problemas de alta frecuencia de términos comunes y baja frecuencia de términos raros.
+3. **El DictVectorizer:** Convierte diccionarios de características en matrices de características, útil para datos estructurados y categóricos que ya están en formato de diccionario.convierte una lista de diccionarios (donde cada diccionario representa una muestra y sus características) en una matriz de características.
+
+### **Stacking Classifer**
+
+1. **Modelos Predictivos**
+   - **Modelo MultinomialNB:** El modelo asume que los datos de entrada son distribuidos según una distribución multinomial, lo cual es adecuado para datos de conteos de palabras o frecuencias de palabras. Calcula las probabilidades de las características (palabras) dadas las clases y utiliza estas probabilidades para predecir la clase más probable para un nuevo documento. En lugar de usar las probabilidades de las características dadas las clases, ComplementNB utiliza las probabilidades complementarias, es decir, la probabilidad de una característica dada todas las clases excepto la clase actual.
+   - **Modelo ComplementNB:** El modelo ComplementNB está diseñado para corregir algunas de las debilidades de MultinomialNB, especialmente cuando se trata de clases desbalanceadas.
+
+    Combinar ambos modelos puede capturar diferentes aspectos de los datos y mejorar la precisión global mejorando el rendimiento del modelo, puede reducir la varianza y aumentar la estabilidad de las predicciones, y ComplementNB puede compensar los sesgos introducidos por MultinomialNB, especialmente en clases desbalanceadas.
+
+2. **Resultado Final**
+   - **Modelo Regresión Logística:** Incorporar una regresión logística multiclase como estimador final en un pipeline después de usar ambos modelos (MultinomialNB y ComplementNB) puede ser una estrategia efectiva para mejorar el rendimiento de clasificación. La regresión logística multiclase toma las predicciones de probabilidad (o las clases predichas) de MultinomialNB y ComplementNB como entradas. Se entrena para aprender cómo estas predicciones deben combinarse para mejorar la precisión global. En la fase de predicción, cada modelo base genera una predicción para un nuevo dato. El meta-modelo utiliza estas predicciones para generar la predicción final, aprovechando la información de ambos modelos base.
 
 ## Desplegando el Servicio
 
