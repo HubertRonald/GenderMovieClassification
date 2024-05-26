@@ -73,5 +73,5 @@ def lambda_handler(event, context):
     # show predict
     return {
         "statusCode": 200,
-        "body": dict(clasification=json.dumps(res)),
+        "body": json.dumps(dict(clasification=res)),
     }
