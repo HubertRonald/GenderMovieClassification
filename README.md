@@ -152,7 +152,8 @@ Para obtener (método **GET**) la clasificación(es) del genero de una película
 
 2. Empleando [hoppscotch](https://hoppscotch.io/) (servicio similar a **postman** pero online)
 
-    En ambos ejeplo puede ser necesario aplicar un paso 7 
+    En ambos ejemplos puede ser necesario aplicar un paso 7, para habilitar el proxy
+
     ![](./src/7org.png)
 
     **Ejemplo 1 - E1**
