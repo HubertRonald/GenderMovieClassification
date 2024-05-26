@@ -165,7 +165,6 @@ Para obtener (método **GET**) la clasificación(es) del genero de una película
     https://56wgw6okv8.execute-api.us-east-1.amazonaws.com/Prod/inference
     ```
 
-
 > **Nota:** Para los ejemplos 1 y 2, se obtienen las respuestas:
 
  |Ejemplo 1 - E1 | Ejemplo 2 - E2 |
