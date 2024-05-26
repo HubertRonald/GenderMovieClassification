@@ -10,8 +10,9 @@ from nltk.stem.porter import PorterStemmer
 from sklearn.preprocessing import normalize
 from sklearn.base import BaseEstimator, TransformerMixin
 
-# https://stackoverflow.com/questions/41610543/corpora-stopwords-not-found-when-import-nltk-library
-nltk.download('stopwords')  # lista de palabras vacías (stopwords) en inglés.
+# Configurar el directorio de datos de nltk
+nltk_data_path = '/var/task/nltk_data'
+nltk.data.path.append(nltk_data_path)
 
 
 class CleanText(BaseEstimator, TransformerMixin):
