@@ -5,7 +5,8 @@ COPY ./model/pipeAPIclf.pkl /opt/ml/model/
 
 RUN pip install --upgrade pip
 RUN python3.9 -m pip install -r requirements.txt -t .
-RUN python3.9 -c "import nltk; nltk.download('stopwords')"
+RUN mkdir -p /var/task/nltk_data
+RUN python3.9 -c "import nltk; nltk.download('stopwords', download_dir='/var/task/nltk_data')"
 
 COPY modules/ ./modules/
 COPY app.py ./
