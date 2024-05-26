@@ -65,6 +65,8 @@ flowchart LR
    cd GenderMovieClassification/gender_movie_classification
    sam init
    ```
+> **Nota:** Este paso 2 es opcional si ya se tiene el arquetipo.
+
 3. Como se requiere levantar el servicio ECR, para ello es necesario saber cuál es nuestro **accountID** (`$ aws configure list`) y la **region** que se emplea habitualmente para la cuenta antes encontrada (`$ aws sts get-caller-identity --query Account --output text`)
     ```bash
     aws --region <region> ecr get-login-password | docker login \
