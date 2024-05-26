@@ -1,9 +1,12 @@
 import json
 import joblib
+import nltk
 import pandas as pd
 from modules.fields import Fields
 from inspect import cleandoc
 
+# Configurar el directorio de datos de nltk
+nltk.data.path.append("/var/task/nltk_data")
 
 # import requests
 def lambda_handler(event, context):
