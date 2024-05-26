@@ -36,7 +36,7 @@ El modelo serializado (pipeline) comprende lo pasos ya mencionados anteriormente
 2. **El TFIDVectorizer:** Convierte texto en una matriz ponderada por TF-IDF, capturando tanto la frecuencia de términos como su importancia relativa. Es útil para manejar problemas de alta frecuencia de términos comunes y baja frecuencia de términos raros.
 3. **El DictVectorizer:** Convierte diccionarios de características en matrices de características, útil para datos estructurados y categóricos que ya están en formato de diccionario.convierte una lista de diccionarios (donde cada diccionario representa una muestra y sus características) en una matriz de características.
 
-### **Stacking Classifer**
+#### **Stacking Classifer**
 
 1. **Modelos Predictivos**
    - **Modelo MultinomialNB:** El modelo asume que los datos de entrada son distribuidos según una distribución multinomial, lo cual es adecuado para datos de conteos de palabras o frecuencias de palabras. Calcula las probabilidades de las características (palabras) dadas las clases y utiliza estas probabilidades para predecir la clase más probable para un nuevo documento. En lugar de usar las probabilidades de las características dadas las clases, ComplementNB utiliza las probabilidades complementarias, es decir, la probabilidad de una característica dada todas las clases excepto la clase actual.
