@@ -1,4 +1,4 @@
-# vehicle_price_prediction
+# gender_movie_classification
 
 This project contains source code and supporting files for a serverless application that you can deploy with the SAM CLI. It includes the following files and folders.
 
@@ -56,11 +56,11 @@ You can find your API Gateway Endpoint URL in the output values displayed after 
 Build your application with the `sam build` command.
 
 ```bash
-Vehicle_price_prediction$ sam build
+gender_movie_classification$ sam build
 ```
 
 ```bash
-Vehicle_price_prediction$ sam build
+gender_movie_classification$ sam build
 ```
 
 The SAM CLI builds a docker image from a Dockerfile and then installs dependencies defined in `model_inference/requirements.txt` inside the docker image. The processed template file is saved in the `.aws-sam/build` folder.
@@ -70,14 +70,14 @@ Test a single function by invoking it directly with a test event. An event is a 
 Run functions locally and invoke them with the `sam local invoke` command.
 
 ```bash
-Vehicle_price_prediction$ sam local invoke ModelInferenceFunction --event events/event.json
+gender_movie_classification$ sam local invoke ModelInferenceFunction --event events/event.json
 ```
 
 The SAM CLI can also emulate your application's API. Use the `sam local start-api` to run the API locally on port 3000.
 
 ```bash
-Vehicle_price_prediction$ sam local start-api
-Vehicle_price_prediction$ curl http://localhost:3000/
+gender_movie_classification$ sam local start-api
+gender_movie_classification$ curl http://localhost:3000/
 ```
 
 The SAM CLI reads the application template to determine the API's routes and the functions that they invoke. The `Events` property on each function's definition includes the route and method for each path.
@@ -101,7 +101,7 @@ To simplify troubleshooting, SAM CLI has a command called `sam logs`. `sam logs`
 `NOTE`: This command works for all AWS Lambda functions; not just the ones you deploy using SAM.
 
 ```bash
-Vehicle_price_prediction$ sam logs -n ModelInferenceFunction --stack-name "VehiclePricePrediction" --tail
+gender_movie_classification$ sam logs -n ModelInferenceFunction --stack-name "VehiclePricePrediction" --tail
 ```
 
 You can find more information and examples about filtering Lambda function logs in the [SAM CLI Documentation](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-logging.html).
@@ -111,8 +111,8 @@ You can find more information and examples about filtering Lambda function logs 
 Tests are defined in the `tests` folder in this project. Use PIP to install the [pytest](https://docs.pytest.org/en/latest/) and run unit tests from your local machine.
 
 ```bash
-Vehicle_price_prediction$ pip install pytest pytest-mock --user
-Vehicle_price_prediction$ python -m pytest tests/ -v
+gender_movie_classification$ pip install pytest pytest-mock --user
+gender_movie_classification$ python -m pytest tests/ -v
 ```
 
 ## Cleanup
@@ -120,7 +120,7 @@ Vehicle_price_prediction$ python -m pytest tests/ -v
 To delete the sample application that you created, use the AWS CLI. Assuming you used your project name for the stack name, you can run the following:
 
 ```bash
-sam delete --stack-name "VehiclePricePrediction"
+sam delete --stack-name "GenderMovieClassification"
 ```
 
 ## Resources

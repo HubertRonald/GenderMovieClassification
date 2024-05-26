@@ -1,4 +1,3 @@
-import os
 import json
 import joblib
 import nltk
@@ -7,7 +6,7 @@ from modules.fields import Fields
 
 
 # Configurar el directorio de datos de nltk
-nltk_data_path = os.getenv('NLTK_DATA', '/var/task/nltk_data')
+nltk_data_path = '/var/task/nltk_data'
 nltk.data.path.append(nltk_data_path)
 
 # import requests
@@ -33,7 +32,7 @@ def lambda_handler(event, context):
 
 
     # read model (pipeline)
-    path = os.getenv('MODEL_PATH', '/opt/ml/model/')
+    path = '/opt/ml/model/'
     model_train = joblib.load(path+'pipeAPIclf.pkl')
 
     # read data
