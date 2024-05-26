@@ -126,14 +126,14 @@ Para obtener (método **GET**) la clasificación(es) del genero de una película
     ```bash
     curl -G \
       -d "plot=who meets by fate ,  shall be sealed by fate . theresa osborne is running along the beach when she stumbles upon a bottle washed up on the shore .  inside is a message ,  reading the letter she feels so moved and yet she felt as if she has violated someone ' s thoughts . in love with a man she has never met ,  theresa tracks down the author of the letter to a small town in wilmington ,  two lovers with crossed paths .  but yet one can ' t let go of their past ." \
-      "https://56wgw6okv8.execute-api.us-east-1.amazonaws.com/Prod/inference"
+      "https://71qrz15jz2.execute-api.us-east-1.amazonaws.com/Prod/inference"
     ```
 
     **Ejemplo 2 - E2**
     ```bash
     curl -G \
       -d "plot=the true story of billy hayes ,  an american college student who is caught smuggling drugs out of turkey and thrown into prison ." \
-      "https://56wgw6okv8.execute-api.us-east-1.amazonaws.com/Prod/inference"
+      "https://71qrz15jz2.execute-api.us-east-1.amazonaws.com/Prod/inference"
     ```
 
 2. Empleando [hoppscotch](https://hoppscotch.io/) (servicio similar a **postman** pero online)
@@ -164,7 +164,7 @@ Para obtener (método **GET**) la clasificación(es) del genero de una película
 
     Endpoint método **GET**
     ```bash
-    https://56wgw6okv8.execute-api.us-east-1.amazonaws.com/Prod/inference
+    https://71qrz15jz2.execute-api.us-east-1.amazonaws.com/Prod/inference
     ```
 
 > **Nota:** Para los ejemplos 1 y 2, se obtienen las respuestas:
