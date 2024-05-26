@@ -16,7 +16,7 @@ El respositorio actual permite desplegar la siguiente arquitectura para disponib
 
 ![](./src/aws_apiRest_serverless_model.png)
 
-## Modelo Predictivo
+## Pipeline: Preprocesamiento y Modelo Predictivo
 
 El pipeline que se [serializó](./gender_movie_classification/model_inference/model/) fue el que se muestra a continuación
 
