@@ -9,7 +9,6 @@
 
 
 # GenderMovieClassification  
-
 Embedding y vectorización de texto para la clasificación de géneros de películas, desplegado en **AWS** con una arquitectura **serverless**.
 
 El proyecto combina técnicas de **NLP** (tokenización, TF-IDF, embeddings) y algoritmos de **machine learning** con un enfoque de **MLOps**, empaquetado en contenedores **Docker** y orquestado mediante **AWS Lambda** y **API Gateway**.  
