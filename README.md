@@ -14,8 +14,6 @@ Embedding y vectorización de texto para la clasificación de géneros de pelíc
 El proyecto combina técnicas de **NLP** (tokenización, TF-IDF, embeddings) y algoritmos de **machine learning** con un enfoque de **MLOps**, empaquetado en contenedores **Docker** y orquestado mediante **AWS Lambda** y **API Gateway**.  
 
 
-# GenderMovieClassification
-
 ## Infraestructura - IaC
 El respositorio actual permite desplegar la siguiente arquitectura para disponibilizar un modelo que clasifica genero de peliculas, previamente calibrado utilizando solo la bilbioteca de sklearn.
 
